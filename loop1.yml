@@ -1,17 +1,13 @@
 ---
-- hosts: 172.31.23.86
+- hosts: all
   become: yes
-  tasks:
-   - name: to copy the files
-     copy:
-       src: "{{ item }}"
-       dest: /tmp
+  tasks: 
+  - name: to copy the files
+    copy:
+      src: "{{ item }}"
+      dest: /tmp
   with_items:
    - /etc/passwd
    - /etc/group
    - /etc/fstap
-   - /etc/shodow
-
-  
-
-      
+   - /etc/shodow    
