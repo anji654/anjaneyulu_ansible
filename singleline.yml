@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name:
-    copy: src=/etc/passwd  dest=/tmp owner=anji
+    copy: src=/etc/passwd  dest=/tmp 
   - name: 
     file: path=/tmp/azure state=touch
   - name:
