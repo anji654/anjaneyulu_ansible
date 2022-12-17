@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name:
+    yum:
+      name: java-8-openjdk
+      state: present
+  - name: 
+    apt: 
+      name: openjdk-8-jdk
+      state: present

@@ -1,0 +1,30 @@
+
+---
+- hosts: all
+  become: yes
+  vars:
+     mydir: /tmp/balu
+     myfile: /etc/passwd
+     mypkg: 
+       - apache2
+       - wget
+       - tree
+  vars_files:
+  - /varibles/vars.yml
+    
+    
+  tasks:
+  - name: to create  directroy 
+    file: 
+      path: "{{mydir}}"
+      state: directory
+  - name: to copy the file 
+    copy: 
+      src: "{{myflie}}"    
+      dest: "{{mydir}}"
+  - name: to install packages
+    apt: 
+      name: "{{ mypkg }}"
+      update_cache: yes
+
+  

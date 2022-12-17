@@ -1,0 +1,20 @@
+--- 
+- hosts: all
+  become: yes 
+  vars:
+    myfile:
+    - /etc/passwd
+    - /etc/group
+    - /etc/fstab
+    mydir:
+    - /tmp
+    - /mnt
+    - /opt
+  tasks:
+    - name: to copy the /etc/passwd 
+      copy:
+        src: "{{item [0]}}"
+        dest: "{{item [1]}}"
+      with_nested: 
+        - "{{myfile}}"
+        - "{{mydir}}"

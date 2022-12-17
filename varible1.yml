@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  vars:
+     mydir: /tmp/balu
+     myfile: /etc/passwd
+     mypkg: 
+       - apache2
+       - wget
+       - tree
+  tasks:
+  - name:
+    file: 
+      path: "{{mydir}}"
+      state: directory
+  - name: 
+    copy:
+      src: "{{myflie}}"    
+      dest: "{{mydir}}"
+  - name:
+    apt: 
+      name: "{{ mypkg }}"
+      update_cache: yes
+
+  

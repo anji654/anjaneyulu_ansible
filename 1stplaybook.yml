@@ -1,0 +1,21 @@
+--- 
+- hosts: all
+  become: yes
+  tasks: 
+  - name: to  copy  /etc/passwd into /tmp
+    copy: 
+      src: /etc/passwd
+      dest: /tmp
+      owner: anji
+      group: anji
+      mode: 777
+  - name: to create file into the /tmp
+    file:
+      path: /tmp/aws
+      state: directory
+  - name: to install apache2
+    apt: 
+      name: apache2
+      state: present
+      update_cache: yes
+

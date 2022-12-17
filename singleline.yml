@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name:
+    copy: src=/etc/passwd  dest=/tmp owner=anji
+  - name: 
+    file: path=/tmp/azure state=touch
+  - name:
+    apt: name=git state=present
+         

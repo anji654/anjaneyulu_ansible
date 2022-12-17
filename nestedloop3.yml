@@ -1,0 +1,11 @@
+--- 
+- hosts: all
+  become: yes 
+  tasks:
+    - name: to copy the /etc/passwd 
+      copy:
+        src: "{{item [0]}}"
+        dest: "{{item [1]}}"
+      with_nested: 
+        - /etc/passwd
+        - /tmp

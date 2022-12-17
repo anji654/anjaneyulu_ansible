@@ -1,0 +1,7 @@
+
+  mydir: /tmp/balu
+  myfile: /etc/passwd
+  mypkg: 
+   - apache2
+   - wget
+   - tree
