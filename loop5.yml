@@ -7,5 +7,5 @@
       name: wget
       
       update_cache: yes
-      state: absent
+      state: present
    
