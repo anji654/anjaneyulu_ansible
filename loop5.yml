@@ -8,6 +8,6 @@
         - apache2
         - wget
         - tree
-        
+      update_cache: yes
       state: present
   
