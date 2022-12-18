@@ -9,8 +9,7 @@
      with_items:
        - /etc/passwd
        - /etc/group
-       - /etc/fstap
-       - /etc/shodow
+       
 
 - name: to create cloud files
   file: 
@@ -25,7 +24,7 @@
 - name: to copy the /etc/passwd files
   copy: 
     src: /etc/passwd
-    dest: "{{item}}"
+    dest: "{{ item }}"
   with_items:
     - /tmp/mycloud-01
     - /tmp/mycloud-02
