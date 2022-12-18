@@ -9,8 +9,7 @@
     with_items:
         - /etc/passwd
         - /etc/group
-        - /etc/fstap
-        - /etc/shadow
+        
 
   - name: to create 
     file: 
