@@ -4,10 +4,8 @@
   tasks:
   - name: to install softwares
     apt: 
-      name: 
-        - apache2
-        - wget
-        - tree
+      name: wget
+      
       update_cache: yes
       state: present
   
