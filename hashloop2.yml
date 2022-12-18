@@ -4,9 +4,9 @@
   tasks: 
   - name: create user and /etc/group
     user:
-      name: "{{item.username}}"
+      name: "{{ item.username }}"
       state: present
-      group: "{{item.groupname}}"
+      group: "{{ item.groupname }}"
     with_items:
       - { username: 'naresh',groupname: 'dev-team'}
       - { username: 'suresh',groupname: 'test-team'}
