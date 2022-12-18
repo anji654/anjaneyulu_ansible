@@ -10,4 +10,4 @@
       - /etc/passwd
       - /etc/group
       - /etc/fstap
-      - /etc/shodow    
+      - /etc/shadow    
