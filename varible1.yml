@@ -22,6 +22,6 @@
       state: present
   - name: 
     copy:
-      src: "{{ myflie }}"    
+      src: "{{ myfile }}"    
       dest: "{{ mydir }}"
   

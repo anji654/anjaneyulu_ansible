@@ -12,7 +12,7 @@
       state: directory
   - name: 
     copy:
-      src: "{{ myflie }}"    
+      src: "{{ myfile }}"    
       dest: "{{ mydir }}"
   - name:
     apt: 
