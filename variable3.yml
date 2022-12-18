@@ -10,7 +10,7 @@
        - wget
        - tree
   vars_files:
-  - /varibles/vars.yml
+  - varibles/vars.yml
     
     
   tasks:
