@@ -9,8 +9,8 @@
   tasks:
     - name: to copy the /etc/passwd 
       copy:
-        src: "{{item}}"
-        dest: "{{item}}"
+        src: "{{ item }}"
+        dest: "{{ item }}"
       with_items: 
-        - "{{myfile}}"
-        - "{{mydir}}"
+        - "{{ myfile }}"
+        - "{{ mydir }}"
