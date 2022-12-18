@@ -13,13 +13,15 @@
     file: 
       path: "{{ mydir }}"
       state: directory
-  - name: 
-    copy:
-      src: "{{ myflie }}"    
-      dest: "{{ mydir }}"
+ 
+
   - name:
     apt: 
       name: "{{ mypkg }}"
       update_cache: yes
-
+      state: present
+  - name: 
+    copy:
+      src: "{{ myflie }}"    
+      dest: "{{ mydir }}"
   
