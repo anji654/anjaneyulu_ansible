@@ -1,12 +1,10 @@
 ---
-- become: yes
-  hosts: all
-  tasks: 
+tasks:
   - name: to copy the files
     copy:
       src: "{{ item }}"
       dest: /tmp
-  with_items:
+with_items:
    - /etc/passwd
    - /etc/group
    - /etc/fstap
