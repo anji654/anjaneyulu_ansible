@@ -11,12 +11,12 @@
   tasks:
   - name:
     file: 
-      path: "{{mydir}}"
+      path: "{{ mydir }}"
       state: directory
   - name: 
     copy:
-      src: "{{myflie}}"    
-      dest: "{{mydir}}"
+      src: "{{ myflie }}"    
+      dest: "{{ mydir }}"
   - name:
     apt: 
       name: "{{ mypkg }}"
