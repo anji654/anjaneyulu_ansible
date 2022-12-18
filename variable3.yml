@@ -20,8 +20,8 @@
       state: directory
   - name: to copy the file 
     copy: 
-      src: "{{myflie}}"    
-      dest: "{{mydir}}"
+      src: "{{ myfile }}"    
+      dest: "{{ mydir }}"
   - name: to install packages
     apt: 
       name: "{{ mypkg }}"
