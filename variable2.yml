@@ -2,13 +2,13 @@
 - hosts: all
   become: yes
   vars_files:
-  - /varibles/vars.yml
+  - varibles/vars.yml
     
     
   tasks:
   - name:
     file: 
-      path: "{{mydir}}"
+      path: "{{ mydir }}"
       state: directory
   - name: 
     copy:
