@@ -5,9 +5,9 @@
   - name: to install softwares
     apt: 
       name: 
-       - apache2
-       - wget
-       - tree
-       - nfs-kernal-server
+        - apache2
+        - wget
+        - tree
+        
       state: present
   
