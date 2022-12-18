@@ -9,24 +9,24 @@
      with_items:
        - /etc/passwd
        - /etc/group
-       
+        
 
-- name: to create cloud files
-  file: 
-    path: "{{ item }}"
-    state: directory
-  with_items:
-    - /tmp/mycloud-01
-    - /tmp/mycloud-02
-    - /tmp/mycloud-o3
-    - /tmp/mycloud-04  
+   - name: to create cloud files
+     file: 
+      path: "{{ item }}"
+      state: directory
+     with_items:
+       - /tmp/mycloud-01
+       - /tmp/mycloud-02
+       - /tmp/mycloud-o3
+       - /tmp/mycloud-04  
       
-- name: to copy the /etc/passwd files
-  copy: 
-    src: /etc/passwd
-    dest: "{{ item }}"
-  with_items:
-    - /tmp/mycloud-01
-    - /tmp/mycloud-02
-    - /tmp/mycloud-o3
-    - /tmp/mycloud-04 
+   - name: to copy the /etc/passwd files
+     copy: 
+      src: /etc/passwd
+      dest: "{{ item }}"
+     with_items:
+      - /tmp/mycloud-01
+      - /tmp/mycloud-02
+      - /tmp/mycloud-o3
+      - /tmp/mycloud-04 
