@@ -2,32 +2,32 @@
 - hosts: all
   become: yes
   tasks:
-   - name: to copy the files
-     copy:
+  - name: to copy the files
+    copy:
        src: "{{ item }}"
        dest: /tmp
-     with_items:
-       - /etc/passwd
-       - /etc/group
-       - /etc/fstap
-       - /etc/shodow
+    with_items:
+        - /etc/passwd
+        - /etc/group
+        - /etc/fstap
+        - /etc/shodow
 
-- name: to create cloud files
-  file: 
-    path: "{{ item }}"
-    state: directory
-  with_items:
-    - /tmp/mycloud-01
-    - /tmp/mycloud-02
-    - /tmp/mycloud-o3
-    - /tmp/mycloud-04  
+  - name: to create 
+    file: 
+       path: "{{ item }}"
+       state: directory
+    with_items:
+         - /tmp/mycloud-01
+         - /tmp/mycloud-02
+         - /tmp/mycloud-o3
+         - /tmp/mycloud-04  
       
-- name: to copy the /etc/passwd files
-  copy: 
-    src: /etc/passwd
-    dest: "{{item}}"
-  with_items:
-    - /tmp/mycloud-01
-    - /tmp/mycloud-02
-    - /tmp/mycloud-o3
-    - /tmp/mycloud-04 
+  - name: to copy the /etc/passwd files
+    copy: 
+        src: /etc/passwd
+        dest: "{{item}}"
+    with_items:
+         - /tmp/mycloud-01
+         - /tmp/mycloud-02
+         - /tmp/mycloud-o3
+         - /tmp/mycloud-04 
