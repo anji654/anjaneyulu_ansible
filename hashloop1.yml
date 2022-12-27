@@ -4,8 +4,8 @@
   tasks:
     - name: to copy the files
       copy:
-        src: "{{item.a}}"
-        dest: "{{item.b}}"
+        src: "{{ item.a }}"
+        dest: "{{ item.b }}"
       with_items:
         - { a: '/etc/passwd',b: '/tmp'}  
         - { a: '/etc/group', b: '/mnt'}

@@ -1,0 +1,16 @@
+---
+ - hosts: all
+   become: yes
+   tasks:
+   - ec2_snapshot_copy:
+      aws_access_key:
+      aws_secret_key:
+      volume_id:
+      source_region: us-west-2
+      region: us-east-1
+      source_snapshot_id:
+      tags:
+        name: north-virgine
+      encryoted: yes  
+  
+  

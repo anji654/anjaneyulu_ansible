@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:  
+  - ec2_snapshot:
+      aws_access_key:
+      aws_secret_key:
+      volume_id:
+      region: us-west-2
+      description: this is my first ebs volume snopshot

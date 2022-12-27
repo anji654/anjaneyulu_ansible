@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  vars: 
+    ids:
+      -
+      -
+      -
+      -
+      -
+      -
+
+  tasks:
+    - local_action:
+        aws_access_key:
+        aws_secret_key:
+        module: ec2
+        state: absent
+        instance_ids: "{{ ids }}"
+        region: us-west-2
+      
+      

@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - local_action:
+       aws_access_key:
+       aws_secret_key:
+       module: ec2
+       instance_tags:
+         name: admin-instance
+         state: stopped
+         region: us-west-2
+         

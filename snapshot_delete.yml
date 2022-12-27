@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become:
+  tasks:
+   - local-action:
+       aws-access_key:
+       aws_secret_key:
+       module: ec2_snapshot
+       snapshot_id:
+       state: absent
+       region: us-west-2

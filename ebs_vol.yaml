@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:  
+  - ec2_vol:
+      aws_access_key:
+      aws_secret_key:
+      volume_size: 10
+      device_name: /dev/sdb1
+      volume_type: io1
+      iops: 100
+      zone: us-west-2a
+      region: us-west-2
+      tags: 
+        name: test-volume
